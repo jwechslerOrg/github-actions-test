@@ -1,17 +1,17 @@
 {
     "family": "ecs-dev",
-    "taskRoleArn": "arn:aws:iam::232122710061:role/ecs-dev",
-    "executionRoleArn": "arn:aws:iam::232122710061:role/ecs-dev-ecs",
+    "taskRoleArn": "arn:aws:iam::120204712483:role/ecs-task-execution-role",
+    "executionRoleArn": "arn:aws:iam::120204712483:role/ecs-task-execution-role",
     "networkMode": "awsvpc",
     "containerDefinitions": [
       {
-        "name": "app",
-        "image": "quay.io/turner/turner-defaultbackend:0.2.0",
+        "name": "sample-app",
+        "image": "120204712483.dkr.ecr.us-east-2.amazonaws.com/sample-app:latest",
         "essential": true,
         "portMappings": [
           {
-            "containerPort": 8001,
-            "hostPort": 8001,
+            "containerPort": 8080,
+            "hostPort": 8080,
             "protocol": "tcp"
           }
         ],
