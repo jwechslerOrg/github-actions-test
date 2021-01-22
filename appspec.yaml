@@ -1,0 +1,16 @@
+version: 0.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:us-east-2:120204712483:task-definition/sample-app:1"
+        LoadBalancerInfo:
+          ContainerName: "sample-app"
+          ContainerPort: 8080
+# Optional properties
+        PlatformVersion: "LATEST"
+        NetworkConfiguration:
+          AwsvpcConfiguration:
+            Subnets: ["subnet-091ffe3615c23c7b7","subnet-003ae0c8b7de4574a", "subnet-056af976b76a79b92"]
+            SecurityGroups: ["sg-03c346e7ab6069fa4"]
+            AssignPublicIp: "ENABLED"
