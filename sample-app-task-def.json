@@ -20,7 +20,7 @@
         "logConfiguration": {
           "logDriver": "awslogs",
           "options": {
-            "awslogs-group": "/fargate/service/ecs-dev",
+            "awslogs-group": "/ecs/sample-app",
             "awslogs-region": "us-east-2",
             "awslogs-stream-prefix": "ecs"
           }
