@@ -19,6 +19,6 @@ public class ExampleControllerTest {
     public void testSayHello() {
         String response = exampleController.sayHello();
 
-        assertEquals("Hello world!", response);
+        assertEquals("Hello Earth!", response);
     }
 }
